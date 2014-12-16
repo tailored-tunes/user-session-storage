@@ -11,11 +11,13 @@ class UserSession
      */
     private $dao;
 
-    public function __construct(SessionDao $dao)
+    public function __construct(SessionDao $dao, $sessionName = '')
     {
         $this->dao = $dao;
         $this->maxTime = get_cfg_var("session.gc_maxlifetime");
-        session_name('Tailored_Tunes_User_Session');
+        if (!empty($sessionName)) {
+            session_name($sessionName);
+        }
         session_set_save_handler(
             [$this, 'open'],
             [$this, 'close'],
