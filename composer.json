@@ -7,7 +7,7 @@
     "session",
     "storage"
   ],
-  "license": "GPLV2",
+  "license": "MIT",
   "authors": [
     {
       "name": "Meza",
