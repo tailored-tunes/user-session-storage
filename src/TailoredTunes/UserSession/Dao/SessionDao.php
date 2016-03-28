@@ -3,7 +3,7 @@ namespace TailoredTunes\UserSession\Dao;
 
 interface SessionDao
 {
-    public function open();
+    public function open($save_path, $session_name);
 
     public function close();
 

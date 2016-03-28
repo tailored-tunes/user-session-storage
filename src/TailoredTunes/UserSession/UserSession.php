@@ -29,9 +29,9 @@ class UserSession
         session_start();
     }
 
-    public function open()
+    public function open($save_path, $session_name)
     {
-        return $this->dao->open();
+        return $this->dao->open($save_path, $session_name);
     }
 
     public function close()
