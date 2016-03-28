@@ -13,5 +13,5 @@ interface SessionDao
 
     public function destroy($id);
 
-    public function gc();
+    public function gc($maxTime);
 }

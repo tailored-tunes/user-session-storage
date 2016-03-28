@@ -54,8 +54,8 @@ class UserSession
         return $this->dao->destroy($id);
     }
 
-    public function gc()
+    public function gc($maxTime)
     {
-        $this->dao->gc();
+        $this->dao->gc($maxTime);
     }
 }
